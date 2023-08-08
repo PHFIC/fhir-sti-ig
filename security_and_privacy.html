@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR-STI\Security and Privacy - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Sexually Transmitted Infections (STI) IG</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="business_case.html">Business Case</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="general_guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="security_and_privacy.html">Security and Privacy</a>
+      </li>
+      <li>
+        <a href="underlying_technologies.html">Underlying Technologies</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CapabilityStatement-fhir-sti-cap.html">Capability Statement</a>
+      </li>
+      <li>
+        <a href="artifacts.html#2">Profiles</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Security and Privacy</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Sexually Transmitted Infections (STI) IG - Local Development build (v0.1.0). See the <a href="http://example.org/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Security and Privacy</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<h3 id="general-considerations">General Considerations</h3>
+<p>Implementation of the Sexually Transmitted Infections IG involves communication of patient-specific clinical information across multiple parties, which requires proper security and privacy protections to avoid malicious or unintentional exposure of such information. All exchanges of data under this IG must be appropriately secured in transit and have access limited only to authorized individuals, which may include the person the information is about, that person’s caregivers, payers paying for the  ociated services, or other individuals or entities who have permission to use the information.</p>
+
+<h4 id="security-considerations-and-guidance">Security Considerations and Guidance</h4>
+<p>All implementers of the Sexually Transmitted Infections IG <strong>SHOULD</strong> follow the FHIR® Security guidance, Security and Privacy Module, the FHIR® Implementer’s Safety Checklist guidance as defined in the FHIR® standard, and US Core security recommendations where applicable and not otherwise superseded by this section of the Sexually Transmitted Infections IG.</p>
+
+<ol>
+  <li>The FHIR® Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR® security specification is available <a href="http://hl7.org/FHIR®/R4/security.html">here</a>.</li>
+  <li>The FHIR® Security and Privacy Module describes access control and authorization considerations to protect a FHIR® server, how to document permissions granted, and how to keep records of performed events. The FHIR® Security and privacy module is available <a href="http://hl7.org/FHIR®/R4/secpriv-module.html">here</a>.</li>
+  <li>The FHIR® Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR® that impact their system design regarding safety. The FHIR® safety check list is available <a href="http://hl7.org/FHIR®/R4/safety.html">here</a>.</li>
+  <li>The US Core IG provides specific requirements and guidance for US Realm IGs around security, privacy, and auditing. The US Core IG is available <a href="http://hl7.org/FHIR®/us/core/security.html">here</a>.</li>
+</ol>
+
+<h4 id="security-requirements">Security Requirements</h4>
+<p>For the purposes of the Sexually Transmitted Infections IG, additional security conformance requirements are as follows:</p>
+
+<h5 id="exchange-security">Exchange Security</h5>
+<ol>
+  <li>In order to protect sensitive patient data while in transit between systems, the exchange of information using the Sexually-Transmitted Infections IG <strong>SHALL</strong> support <a href="https://tools.ietf.org/html/rfc5246">Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)</a> or a more recent version of TLS for transport layer security.</li>
+  <li>Server implementations that expect to support browser-based javascript applications <strong>SHOULD</strong> enable <a href="https://www.w3.org/TR/cors/">Cross-Origin Resource Sharing (CORS)</a> for REST operations. See the <a href="http://hl7.org/FHIR®/R4/security.html#http">Communications section of the FHIR® security page</a> for additional details and recommendations on safely enabling CORS.</li>
+</ol>
+
+<h5 id="authentication-and-authorization">Authentication and Authorization</h5>
+<p>To prevent unauthorized access to sensitive data, implementers <strong>SHALL</strong> use at least one of the following:</p>
+
+<ol>
+  <li>The security requirements from the <a href="http://hl7.org/FHIR®/us/core/security.html">US Core Implementation Guide</a>,</li>
+  <li>The <a href="http://hl7.org/FHIR®/smart-app-launch/index.html">SMART on FHIR® App Launch Framework</a>,</li>
+  <li><a href="http://www.hl7.org/FHIR®/smart-app-launch/backend-services.html">SMART on FHIR® Backend Services</a>,</li>
+  <li>Mutually authenticated TLS, or</li>
+  <li><a href="https://www.udap.org/">Unified Data Access Profiles (UDAP)</a> recommended by the ONC FHIR® At Scale Taskforce (FAST) security tiger team.</li>
+</ol>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">Example Publisher</a>.  Package fhir-sti#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 28, 2023 08:51-0400">2023-07-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

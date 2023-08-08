@@ -1,0 +1,52 @@
+﻿fhirsti : Validation Results
+=========================================
+
+err = 22, warn = 7, info = 0
+IG Publisher Version: 1.2.38 Out of date - current version is 1.3.25
+Generated Fri Jul 28 08:51:42 EDT 2023. FHIR version 4.0.1 for fhir-sti#0.1.0 (canonical = http://example.org)
+ Build Errors : 0 / 0 / 0
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/ImplementationGuide-fhir-sti : 0 / 1 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/StructureDefinition-STI-USCoreCarePlan : 0 / 2 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/StructureDefinition-STI-USCoreEncounter : 0 / 1 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/StructureDefinition-STI-USCoreLocation : 0 / 1 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/StructureDefinition-STI-USCorePatient : 0 / 1 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/fsh-generated/resources/StructureDefinition-STI-USCoreSpecimen : 0 / 1 / 1
+ /Users/dwhill/Documents/projects/phfic/fhir-sti/input/resources/CapabilityStatement-fhir-sti-cap : 22 / 0 / 1
+</table>
+== n/a ==
+== fsh-generated/resources/ImplementationGuide-fhir-sti.json ==
+WARNING: ImplementationGuide/fhir-sti: ImplementationGuide: Rule ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/StructureDefinition-STI-USCoreCarePlan.json ==
+WARNING: StructureDefinition/STI-USCoreCarePlan: StructureDefinition.snapshot.element[9].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+WARNING: StructureDefinition.where(url = 'http://example.org/StructureDefinition/STI-USCoreCarePlan'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-STI-USCoreEncounter.json ==
+WARNING: StructureDefinition.where(url = 'http://example.org/StructureDefinition/STI-USCoreEncounter'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-STI-USCoreLocation.json ==
+WARNING: StructureDefinition.where(url = 'http://example.org/StructureDefinition/STI-USCoreLocation'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-STI-USCorePatient.json ==
+WARNING: StructureDefinition.where(url = 'http://example.org/StructureDefinition/STI-USCorePatient'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-STI-USCoreSpecimen.json ==
+WARNING: StructureDefinition.where(url = 'http://example.org/StructureDefinition/STI-USCoreSpecimen'): The Implementation Guide contains no examples for this profile
+== input/resources/CapabilityStatement-fhir-sti-cap.json ==
+ERROR: CapabilityStatement.rest[0].resource[5].searchParam: Array cannot be empty - the property should not be present if it has no values
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/us/fhir-sti/ImplementationGuide/hl7.fhir.us.fhir-sti' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[0].searchParam[4].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[0].searchParam[5].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[0].searchParam[6].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[0].searchParam[7].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[7].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-onset-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[8].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-abatement-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[9].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-clinical-status' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[10].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-recorded-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[11].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-asserted-date' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[12].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[13].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-code' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[1].searchParam[14].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category-encounter' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-identifier' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[7].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[8].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-date-patient' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[9].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-status' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[10].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-class-patient' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[11].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-discharge-disposition' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[2].searchParam[12].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-location' does not resolve
+ERROR: CapabilityStatement/fhir-sti-cap: CapabilityStatement.rest[0].resource[4].searchParam[11].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type' does not resolve

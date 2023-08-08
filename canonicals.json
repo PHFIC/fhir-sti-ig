@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "fhir-sti-cap",
+    "type" : "CapabilityStatement",
+    "url" : "http://example.org/CapabilityStatement/fhir-sti-cap",
+    "version" : "0.1.0",
+    "name" : "Sexually_Transmitted_Infections_CapabilityStatement"
+  },
+  {
+    "id" : "fhir-sti",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.org/ImplementationGuide/fhir-sti",
+    "version" : "0.1.0",
+    "name" : "fhirsti"
+  },
+  {
+    "id" : "STI-USCoreCarePlan",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/STI-USCoreCarePlan",
+    "version" : "0.1.0",
+    "name" : "STIUSCoreCarePlan"
+  },
+  {
+    "id" : "STI-USCoreEncounter",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/STI-USCoreEncounter",
+    "version" : "0.1.0",
+    "name" : "STIUSCoreEncounter"
+  },
+  {
+    "id" : "STI-USCoreLocation",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/STI-USCoreLocation",
+    "version" : "0.1.0",
+    "name" : "STIUSCoreLocation"
+  },
+  {
+    "id" : "STI-USCorePatient",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/STI-USCorePatient",
+    "version" : "0.1.0",
+    "name" : "STIUSCorePatient"
+  },
+  {
+    "id" : "STI-USCoreSpecimen",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/STI-USCoreSpecimen",
+    "version" : "0.1.0",
+    "name" : "STIUSCoreSpecimen"
+  }
+]

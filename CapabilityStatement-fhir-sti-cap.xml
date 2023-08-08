@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="fhir-sti-cap"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Sexually_Transmitted_Infections_CapabilityStatement</h2><div><p>This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide.</p>
+</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td/></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td>y</td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title="GET a resource (read interaction)">Read</b></th><th><b title="GET past versions of resources (vread interaction)">V-Read</b></th><th><b title="GET all set of resources of the type (search interaction)">Search</b></th><th><b title="PUT a new resource version (update interaction)">Update</b></th><th><b title="PATCH a new resource version (patch interaction)">Patch</b></th><th><b title="POST a new resource (create interaction)">Create</b></th><th><b title="DELETE a resource (delete interaction)">Delete</b></th><th><b title="GET changes to a resource (history interaction on instance)">Updates</b></th><th><b title="GET changes for all resources of the type (history interaction on type)">History</b></th></tr><tr><td>CarePlan</td><td>Supported profiles:<br/>  <a href="http://example.org/StructureDefinition/STI-USCoreCarePlan">http://example.org/StructureDefinition/STI-USCoreCarePlan</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Condition</td><td><a href="http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth">http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Encounter</td><td><a href="http://example.org/StructureDefinition/STI-USCoreEncounter">http://example.org/StructureDefinition/STI-USCoreEncounter</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Location</td><td><a href="http://example.org/StructureDefinition/STI-USCoreLocation">http://example.org/StructureDefinition/STI-USCoreLocation</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Patient</td><td><a href="http://example.org/StructureDefinition/STI-USCorePatient">http://example.org/StructureDefinition/STI-USCorePatient</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Specimen</td><td><a href="http://example.org/StructureDefinition/STI-USCoreSpecimen">http://example.org/StructureDefinition/STI-USCoreSpecimen</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr></table></div>
+  </text>
+  <url value="http://example.org/CapabilityStatement/fhir-sti-cap"/>
+  <version value="0.1.0"/>
+  <name value="Sexually_Transmitted_Infections_CapabilityStatement"/>
+  <title value="Sexually Transmitted Infections Capability Statement"/>
+  <status value="draft"/>
+  <date value="2022-08-12T00:00:00+00:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <implementationGuide value="http://hl7.org/fhir/us/fhir-sti/ImplementationGuide/hl7.fhir.us.fhir-sti"/>
+  <rest>
+    <mode value="server"/>
+    <resource>
+      <type value="CarePlan"/>
+      <supportedProfile value="http://example.org/StructureDefinition/STI-USCoreCarePlan"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="CarePlan.subject"/>
+      <searchInclude value="CarePlan.based-on"/>
+      <searchInclude value="CarePlan.replaces"/>
+      <searchInclude value="CarePlan.part-of"/>
+      <searchInclude value="CarePlan.encounter"/>
+      <searchInclude value="CarePlan.author"/>
+      <searchInclude value="CarePlan.contributor"/>
+      <searchInclude value="CarePlan.care-team"/>
+      <searchInclude value="CarePlan.addresses"/>
+      <searchInclude value="CarePlan.supporting-info"/>
+      <searchInclude value="CarePlan.goal"/>
+      <searchParam>
+        <name value="category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+        <documentation value="Obtained date/time. If the obtained element is a period, a date that falls in the period"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="combo-patient-category-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="combo-patient-category-status-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="combo-patient-category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="combo-patient-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-date"/>
+        <type value="composite"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Condition"/>
+      <profile value="http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="Condition.subject"/>
+      <searchParam>
+        <name value="onset-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="asserted-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="recorded-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="abatement-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+        <documentation value="The code of the condition"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="The subject that the condition is about (if patient)"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-encounter"/>
+        <type value="reference"/>
+        <documentation value="Encounter related to the report"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-onset-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-onset-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-abatement-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-abatement-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-clinical-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-clinical-status"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-recorded-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-recorded-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-asserted-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-asserted-date"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-code"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-category-encounter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category-encounter"/>
+        <type value="composite"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Encounter"/>
+      <profile value="http://example.org/StructureDefinition/STI-USCoreEncounter"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="Encounter.assigner"/>
+      <searchInclude value="Encounter.subject"/>
+      <searchInclude value="Encounter.episode-of-care"/>
+      <searchInclude value="Encounter.based-on"/>
+      <searchInclude value="Encounter.appointment"/>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-identifier"/>
+        <type value="token"/>
+        <documentation value="Search by identifier"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Search by subject - a patient"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="type"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="discharge-disposition"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="date-patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-date-patient"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-status"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="class-patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-class-patient"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-discharge-disposition"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-discharge-disposition"/>
+        <type value="composite"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-location"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-location"/>
+        <type value="composite"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Location"/>
+      <profile value="http://example.org/StructureDefinition/STI-USCoreLocation"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="Location.managing-organization"/>
+      <searchInclude value="Location.part-of"/>
+      <searchInclude value="Location.endpoint"/>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="address"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="address-city"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="address-state"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="address-postalcode"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Patient"/>
+      <profile value="http://example.org/StructureDefinition/STI-USCorePatient"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="Patient.general-practitioner"/>
+      <searchInclude value="Patient.managing-organization"/>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
+        <type value="token"/>
+        <documentation value="Search by identifier"/>
+      </searchParam>
+      <searchParam>
+        <name value="birthdate"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="death-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="family"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="gender"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="given"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="birthdate-family"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="death-date-family"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="birthdate-name"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="family-gender"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="gender-name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type"/>
+        <type value="composite"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Specimen"/>
+      <profile value="http://example.org/StructureDefinition/STI-USCoreSpecimen"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="vread"/>
+      </interaction>
+      <interaction>
+        <code value="history-instance"/>
+      </interaction>
+      <interaction>
+        <code value="history-type"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+      <conditionalCreate value="true"/>
+      <conditionalUpdate value="true"/>
+      <conditionalDelete value="multiple"/>
+      <referencePolicy value="literal"/>
+      <referencePolicy value="logical"/>
+      <searchInclude value="Specimen.subject"/>
+      <searchInclude value="Specimen.parent"/>
+      <searchInclude value="Specimen.request"/>
+    </resource>
+    <interaction>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <code value="batch"/>
+    </interaction>
+    <interaction>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <code value="search-system"/>
+    </interaction>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <name value="_content"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-content"/>
+      <type value="string"/>
+    </searchParam>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <name value="_id"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+      <type value="token"/>
+    </searchParam>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <name value="_lastUpdated"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+      <type value="date"/>
+    </searchParam>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <name value="_security"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-security"/>
+      <type value="token"/>
+    </searchParam>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <name value="_text"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/DomainResource-text"/>
+      <type value="string"/>
+    </searchParam>
+    <searchParam>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <name value="_query"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-query"/>
+      <type value="token"/>
+    </searchParam>
+  </rest>
+</CapabilityStatement>

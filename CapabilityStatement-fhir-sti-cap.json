@@ -1,0 +1,597 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "fhir-sti-cap",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Sexually_Transmitted_Infections_CapabilityStatement</h2><div><p>This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td/></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td>y</td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET past versions of resources (vread interaction)\">V-Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"PATCH a new resource version (patch interaction)\">Patch</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th><th><b title=\"DELETE a resource (delete interaction)\">Delete</b></th><th><b title=\"GET changes to a resource (history interaction on instance)\">Updates</b></th><th><b title=\"GET changes for all resources of the type (history interaction on type)\">History</b></th></tr><tr><td>CarePlan</td><td>Supported profiles:<br/>  <a href=\"http://example.org/StructureDefinition/STI-USCoreCarePlan\">http://example.org/StructureDefinition/STI-USCoreCarePlan</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Condition</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth\">http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Encounter</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreEncounter\">http://example.org/StructureDefinition/STI-USCoreEncounter</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Location</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreLocation\">http://example.org/StructureDefinition/STI-USCoreLocation</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Patient</td><td><a href=\"http://example.org/StructureDefinition/STI-USCorePatient\">http://example.org/StructureDefinition/STI-USCorePatient</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Specimen</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreSpecimen\">http://example.org/StructureDefinition/STI-USCoreSpecimen</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr></table></div>"
+  },
+  "url" : "http://example.org/CapabilityStatement/fhir-sti-cap",
+  "version" : "0.1.0",
+  "name" : "Sexually_Transmitted_Infections_CapabilityStatement",
+  "title" : "Sexually Transmitted Infections Capability Statement",
+  "status" : "draft",
+  "date" : "2022-08-12T00:00:00+00:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "description" : "This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["xml",
+  "json"],
+  "implementationGuide" : ["http://hl7.org/fhir/us/fhir-sti/ImplementationGuide/hl7.fhir.us.fhir-sti"],
+  "rest" : [{
+    "mode" : "server",
+    "resource" : [{
+      "type" : "CarePlan",
+      "supportedProfile" : ["http://example.org/StructureDefinition/STI-USCoreCarePlan"],
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["CarePlan.subject",
+      "CarePlan.based-on",
+      "CarePlan.replaces",
+      "CarePlan.part-of",
+      "CarePlan.encounter",
+      "CarePlan.author",
+      "CarePlan.contributor",
+      "CarePlan.care-team",
+      "CarePlan.addresses",
+      "CarePlan.supporting-info",
+      "CarePlan.goal"],
+      "searchParam" : [{
+        "name" : "category",
+        "type" : "token"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date",
+        "documentation" : "Obtained date/time. If the obtained element is a period, a date that falls in the period"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference"
+      },
+      {
+        "name" : "status",
+        "type" : "token"
+      },
+      {
+        "name" : "combo-patient-category-status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status",
+        "type" : "composite"
+      },
+      {
+        "name" : "combo-patient-category-status-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status-date",
+        "type" : "composite"
+      },
+      {
+        "name" : "combo-patient-category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category",
+        "type" : "composite"
+      },
+      {
+        "name" : "combo-patient-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-date",
+        "type" : "composite"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : "http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["Condition.subject"],
+      "searchParam" : [{
+        "name" : "onset-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "asserted-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "recorded-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "abatement-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token",
+        "documentation" : "The code of the condition"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference",
+        "documentation" : "The subject that the condition is about (if patient)"
+      },
+      {
+        "name" : "encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+        "type" : "reference",
+        "documentation" : "Encounter related to the report"
+      },
+      {
+        "name" : "patient-onset-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-onset-date",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-abatement-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-abatement-date",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-clinical-status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-clinical-status",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-recorded-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-recorded-date",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-asserted-date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-asserted-date",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-code",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-category-encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category-encounter",
+        "type" : "composite"
+      }]
+    },
+    {
+      "type" : "Encounter",
+      "profile" : "http://example.org/StructureDefinition/STI-USCoreEncounter",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["Encounter.assigner",
+      "Encounter.subject",
+      "Encounter.episode-of-care",
+      "Encounter.based-on",
+      "Encounter.appointment"],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-identifier",
+        "type" : "token",
+        "documentation" : "Search by identifier"
+      },
+      {
+        "name" : "status",
+        "type" : "token"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference",
+        "documentation" : "Search by subject - a patient"
+      },
+      {
+        "name" : "category",
+        "type" : "token"
+      },
+      {
+        "name" : "type",
+        "type" : "token"
+      },
+      {
+        "name" : "date",
+        "type" : "date"
+      },
+      {
+        "name" : "discharge-disposition",
+        "type" : "token"
+      },
+      {
+        "name" : "patient-type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type",
+        "type" : "composite"
+      },
+      {
+        "name" : "date-patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-date-patient",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-status",
+        "type" : "composite"
+      },
+      {
+        "name" : "class-patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-class-patient",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-discharge-disposition",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-discharge-disposition",
+        "type" : "composite"
+      },
+      {
+        "name" : "patient-location",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-location",
+        "type" : "composite"
+      }]
+    },
+    {
+      "type" : "Location",
+      "profile" : "http://example.org/StructureDefinition/STI-USCoreLocation",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["Location.managing-organization",
+      "Location.part-of",
+      "Location.endpoint"],
+      "searchParam" : [{
+        "name" : "name",
+        "type" : "string"
+      },
+      {
+        "name" : "address",
+        "type" : "string"
+      },
+      {
+        "name" : "address-city",
+        "type" : "string"
+      },
+      {
+        "name" : "address-state",
+        "type" : "string"
+      },
+      {
+        "name" : "address-postalcode",
+        "type" : "string"
+      }]
+    },
+    {
+      "type" : "Patient",
+      "profile" : "http://example.org/StructureDefinition/STI-USCorePatient",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["Patient.general-practitioner",
+      "Patient.managing-organization"],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+        "type" : "token",
+        "documentation" : "Search by identifier"
+      },
+      {
+        "name" : "birthdate",
+        "type" : "date"
+      },
+      {
+        "name" : "death-date",
+        "type" : "date"
+      },
+      {
+        "name" : "family",
+        "type" : "string"
+      },
+      {
+        "name" : "gender",
+        "type" : "token"
+      },
+      {
+        "name" : "given",
+        "type" : "string"
+      },
+      {
+        "name" : "name",
+        "type" : "string"
+      },
+      {
+        "name" : "birthdate-family",
+        "type" : "token"
+      },
+      {
+        "name" : "death-date-family",
+        "type" : "token"
+      },
+      {
+        "name" : "birthdate-name",
+        "type" : "date"
+      },
+      {
+        "name" : "family-gender",
+        "type" : "token"
+      },
+      {
+        "name" : "gender-name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type",
+        "type" : "composite"
+      }]
+    },
+    {
+      "type" : "Specimen",
+      "profile" : "http://example.org/StructureDefinition/STI-USCoreSpecimen",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "vread"
+      },
+      {
+        "code" : "history-instance"
+      },
+      {
+        "code" : "history-type"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal",
+      "logical"],
+      "searchInclude" : ["Specimen.subject",
+      "Specimen.parent",
+      "Specimen.request"]
+    }],
+    "interaction" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "code" : "batch"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "code" : "search-system"
+    }],
+    "searchParam" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "name" : "_content",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-content",
+      "type" : "string"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "name" : "_id",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+      "type" : "token"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "name" : "_lastUpdated",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+      "type" : "date"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "name" : "_security",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-security",
+      "type" : "token"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "name" : "_text",
+      "definition" : "http://hl7.org/fhir/SearchParameter/DomainResource-text",
+      "type" : "string"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "MAY"
+      }],
+      "name" : "_query",
+      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-query",
+      "type" : "token"
+    }]
+  }]
+}

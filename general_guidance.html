@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR-STI\General Guidance - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Sexually Transmitted Infections (STI) IG</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="business_case.html">Business Case</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="general_guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="security_and_privacy.html">Security and Privacy</a>
+      </li>
+      <li>
+        <a href="underlying_technologies.html">Underlying Technologies</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CapabilityStatement-fhir-sti-cap.html">Capability Statement</a>
+      </li>
+      <li>
+        <a href="artifacts.html#2">Profiles</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>General Guidance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Sexually Transmitted Infections (STI) IG - Local Development build (v0.1.0). See the <a href="http://example.org/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>General Guidance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#claiming-conformance-to-a-fhir-sti-profile" id="markdown-toc-claiming-conformance-to-a-fhir-sti-profile">Claiming Conformance to a FHIR STI Profile</a></li>
+  <li><a href="#must-support" id="markdown-toc-must-support">Must Support</a></li>
+  <li><a href="#must-support-of-codeableconcept-text-elements" id="markdown-toc-must-support-of-codeableconcept-text-elements">Must Support of CodeableConcept Text Elements</a></li>
+  <li><a href="#must-support-of-resource-text-elements" id="markdown-toc-must-support-of-resource-text-elements">Must Support of Resource Text Elements</a></li>
+</ul>
+
+</div>
+
+<p>This section defines additional requirements and guidance relevant to this guide as a whole. The conformance verbs - <strong>SHALL</strong>, <strong>SHOULD</strong>, <strong>MAY</strong> - used in this guide are defined in <a href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules</a>.</p>
+
+<h3 id="claiming-conformance-to-a-fhir-sti-profile">Claiming Conformance to a FHIR STI Profile</h3>
+<p>To claim conformance to a profile in this guide, servers <strong>SHALL</strong>:</p>
+
+<ul>
+  <li>Be able to populate all profile data elements that have a minimum cardinality &gt;= 1 and/or flagged as Must Support as defined by that profile’s StructureDefinition.</li>
+  <li>Conform to the <a href="CapabilityStatement-fhir-sti-cap.html">STI Capability Statement</a> expectations for that profile’s type.
+<!-- TODO note about what profiles must be supported?--></li>
+</ul>
+
+<h3 id="must-support">Must Support</h3>
+<p>The following rules apply to all STI Profile elements marked as Must Support. Must Support on any profile data element <strong>SHALL</strong> be interpreted as follows:</p>
+
+<h4 id="data-source-system-requirements">Data Source System Requirements</h4>
+
+<ul>
+  <li>Data Sources Systems <strong>SHALL</strong> be capable of populating all data elements as part of the query results as specified by the <a href="CapabilityStatement-fhir-sti-cap.html">STI Capability Statement</a>.</li>
+</ul>
+
+<h4 id="data-consumer-system-requirements">Data Consumer System Requirements</h4>
+
+<ul>
+  <li>Data Consumer Systems <strong>SHALL</strong> be capable of displaying the data elements for human use.</li>
+  <li>Data Consumer Systems <strong>SHOULD</strong> be capable of storing the data elements for other uses (such record keeping of data used for clinical use).</li>
+  <li>Data Consumer Systems <strong>SHALL</strong> be capable of processing resource instances containing the data element without generating an error or causing the application to fail.</li>
+  <li>Data Consumer Systems <strong>SHALL</strong> interpret missing data elements within resources instances as not being present on the Data Sources system’s or as being withheld for privacy or business reasons.</li>
+  <li>Data Consumer Systems <strong>SHALL</strong> be able to process resource instances containing data elements asserting missing information. Data Consumer Systems are not required to process assertions of missing data. Assertion of missing information may be expressed using an appropriate value set code (such as nullFlavor) where available or using a dataAbsentReason extension.</li>
+</ul>
+
+<p>Profiles by this guide, but defined in other implementation guides inherit the definition of Must Support from their respective guides.</p>
+
+<h3 id="must-support-of-codeableconcept-text-elements">Must Support of CodeableConcept Text Elements</h3>
+
+<p>The area of advance directive interoperability is relatively new and codes capturing the concepts related to advance directives are not well established or well known. This implementation guide provides several codes for expressing this information, but specifies extensible bindings to use other code systems where necessary. These code systems may also not be well-known. 
+Additionally, there are not widely accepted universal or national for standards for capturing this information. Different scopes of use and jurisdictions capture and organize this information in different ways. As such, it is important for data sources to capture this information as it is presented and for data consumer systems to be able to present it the same way to users.</p>
+
+<p>To that end, several <code class="language-plaintext highlighter-rouge">CodeableConcept</code> <code class="language-plaintext highlighter-rouge">text</code> data elements are marked as Must Support.</p>
+
+<p>Per the FHIR Standard for <a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept">Using Text in CodeableConcept</a>:</p>
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">text</code> is the representation of the concept as entered or chosen by the user, and which most closely represents the intended meaning of the user or concept. Very often the <code class="language-plaintext highlighter-rouge">text</code> is the same as a <code class="language-plaintext highlighter-rouge">display</code> of one of the codings. One or more of the codings may be flagged as the user selected code - the code or concept that the user actually selected directly.</p>
+</blockquote>
+
+<p>In some cases a code may not exist for a particular concept, in such a case, it is possible to to provide a free text only representation of the concept in the <code class="language-plaintext highlighter-rouge">CodeableConcept</code> <code class="language-plaintext highlighter-rouge">text</code> element without any ‘coding’ elements present.</p>
+
+<p>For example, using text only, the <code class="language-plaintext highlighter-rouge">Goal.category</code> element would be:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"valueCodeableConcept": {
+    "text": "Free text concept description"
+}
+</code></pre></div></div>
+
+<h3 id="must-support-of-resource-text-elements">Must Support of Resource Text Elements</h3>
+
+<p>Due to the fact that advance directive interoperability is relatively new and there are not any widely accepted universal or national for standards for capturing this information, advance directives may be represented in many different ways. It is important that this information be communicated as it is meant and that it is received and viewable in that same manner.</p>
+
+<p>To address this need, most of the profiles in this implementation guide require the resource instance’s <code class="language-plaintext highlighter-rouge">text</code> element (cardinality <code class="language-plaintext highlighter-rouge">1..1</code>).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">text</code> element of a resource is a <a href="http://hl7.org/fhir/R4/narrative.html#Narrative">Narrative</a> data type. The <code class="language-plaintext highlighter-rouge">status</code> element of this data type indicates whether the text is generated by a system based on the structured data in the resource or if it contains additional information. The <code class="language-plaintext highlighter-rouge">status</code> element is required.</p>
+
+<p>For the purposes of this implemention guide, it is expected that most implementations will have resource instances that have additional data in the <code class="language-plaintext highlighter-rouge">text</code> than is captured in the structured data. When that is the case, the narrative <code class="language-plaintext highlighter-rouge">text.status</code> <strong>SHALL</strong> be <code class="language-plaintext highlighter-rouge">additional</code>.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">Example Publisher</a>.  Package fhir-sti#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 28, 2023 08:51-0400">2023-07-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

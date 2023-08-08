@@ -1,0 +1,863 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/CapabilityStatement/fhir-sti-cap> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "fhir-sti-cap"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Sexually_Transmitted_Infections_CapabilityStatement</h2><div><p>This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td/></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td>y</td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET past versions of resources (vread interaction)\">V-Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"PATCH a new resource version (patch interaction)\">Patch</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th><th><b title=\"DELETE a resource (delete interaction)\">Delete</b></th><th><b title=\"GET changes to a resource (history interaction on instance)\">Updates</b></th><th><b title=\"GET changes for all resources of the type (history interaction on type)\">History</b></th></tr><tr><td>CarePlan</td><td>Supported profiles:<br/>  <a href=\"http://example.org/StructureDefinition/STI-USCoreCarePlan\">http://example.org/StructureDefinition/STI-USCoreCarePlan</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Condition</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth\">http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Encounter</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreEncounter\">http://example.org/StructureDefinition/STI-USCoreEncounter</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Location</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreLocation\">http://example.org/StructureDefinition/STI-USCoreLocation</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Patient</td><td><a href=\"http://example.org/StructureDefinition/STI-USCorePatient\">http://example.org/StructureDefinition/STI-USCorePatient</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Specimen</td><td><a href=\"http://example.org/StructureDefinition/STI-USCoreSpecimen\">http://example.org/StructureDefinition/STI-USCoreSpecimen</a></td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td><td>y</td></tr></table></div>"
+  ]; # 
+  fhir:CapabilityStatement.url [ fhir:value "http://example.org/CapabilityStatement/fhir-sti-cap"]; # 
+  fhir:CapabilityStatement.version [ fhir:value "0.1.0"]; # 
+  fhir:CapabilityStatement.name [ fhir:value "Sexually_Transmitted_Infections_CapabilityStatement"]; # 
+  fhir:CapabilityStatement.title [ fhir:value "Sexually Transmitted Infections Capability Statement"]; # 
+  fhir:CapabilityStatement.status [ fhir:value "draft"]; # 
+  fhir:CapabilityStatement.date [ fhir:value "2022-08-12T00:00:00+00:00"^^xsd:dateTime]; # 
+  fhir:CapabilityStatement.publisher [ fhir:value "Example Publisher"]; # 
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Example Publisher" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://example.org/example-publisher" ]
+     ]
+  ]; # 
+  fhir:CapabilityStatement.description [ fhir:value "This Capability Statement defines the expected capabilities of a Sexually Transmitted Infections FHIR server conforming to the Sexually Transmitted Infections Implementation Guide."]; # 
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ]; # 
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"]; # 
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"]; # 
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ]; # 
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://hl7.org/fhir/us/fhir-sti/ImplementationGuide/hl7.fhir.us.fhir-sti";
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/fhir-sti/ImplementationGuide/hl7.fhir.us.fhir-sti>
+  ]; # 
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "CarePlan" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCoreCarePlan";
+         fhir:index 0;
+         fhir:link <http://example.org/StructureDefinition/STI-USCoreCarePlan>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "CarePlan.subject";
+         fhir:index 0
+       ], [
+         fhir:value "CarePlan.based-on";
+         fhir:index 1
+       ], [
+         fhir:value "CarePlan.replaces";
+         fhir:index 2
+       ], [
+         fhir:value "CarePlan.part-of";
+         fhir:index 3
+       ], [
+         fhir:value "CarePlan.encounter";
+         fhir:index 4
+       ], [
+         fhir:value "CarePlan.author";
+         fhir:index 5
+       ], [
+         fhir:value "CarePlan.contributor";
+         fhir:index 6
+       ], [
+         fhir:value "CarePlan.care-team";
+         fhir:index 7
+       ], [
+         fhir:value "CarePlan.addresses";
+         fhir:index 8
+       ], [
+         fhir:value "CarePlan.supporting-info";
+         fhir:index 9
+       ], [
+         fhir:value "CarePlan.goal";
+         fhir:index 10
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "category" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Obtained date/time. If the obtained element is a period, a date that falls in the period" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-patient";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "combo-patient-category-status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status";
+           fhir:link <http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "combo-patient-category-status-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category-status-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "combo-patient-category" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category";
+           fhir:link <http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-category>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "combo-patient-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/CarePlan-combo-patient-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Condition" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth";
+         fhir:link <http://example.org/StructureDefinition/STI-USCoreConditionProblemsHealth>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Condition.subject";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "onset-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "asserted-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "recorded-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "abatement-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-code";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-code>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "The code of the condition" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-patient";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "The subject that the condition is about (if patient)" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "encounter" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-encounter";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-encounter>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Encounter related to the report" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-onset-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-onset-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-onset-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-abatement-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-abatement-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-abatement-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 9;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-clinical-status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-clinical-status";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-clinical-status>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 10;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-recorded-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-recorded-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-recorded-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 11;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-asserted-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-asserted-date";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-asserted-date>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 12;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-category" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 13;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-code" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-code";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-code>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 14;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-category-encounter" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category-encounter";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-combo-patient-category-encounter>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Encounter" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCoreEncounter";
+         fhir:link <http://example.org/StructureDefinition/STI-USCoreEncounter>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Encounter.assigner";
+         fhir:index 0
+       ], [
+         fhir:value "Encounter.subject";
+         fhir:index 1
+       ], [
+         fhir:value "Encounter.episode-of-care";
+         fhir:index 2
+       ], [
+         fhir:value "Encounter.based-on";
+         fhir:index 3
+       ], [
+         fhir:value "Encounter.appointment";
+         fhir:index 4
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-identifier";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-identifier>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Search by identifier" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-patient";
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Search by subject - a patient" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "category" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "type" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "discharge-disposition" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-type" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "date-patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-date-patient";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-date-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 9;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-status";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-status>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 10;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "class-patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-class-patient";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-class-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 11;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-discharge-disposition" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-discharge-disposition";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-discharge-disposition>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index 12;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-location" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-location";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-location>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Location" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCoreLocation";
+         fhir:link <http://example.org/StructureDefinition/STI-USCoreLocation>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Location.managing-organization";
+         fhir:index 0
+       ], [
+         fhir:value "Location.part-of";
+         fhir:index 1
+       ], [
+         fhir:value "Location.endpoint";
+         fhir:index 2
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address-city" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address-state" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address-postalcode" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Patient" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCorePatient";
+         fhir:link <http://example.org/StructureDefinition/STI-USCorePatient>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Patient.general-practitioner";
+         fhir:index 0
+       ], [
+         fhir:value "Patient.managing-organization";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Patient-identifier";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Patient-identifier>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Search by identifier" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "birthdate" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "death-date" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "family" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "gender" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "given" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "birthdate-family" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "death-date-family" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 9;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "birthdate-name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index 10;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "family-gender" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 11;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "gender-name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Encounter-combo-patient-type>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Specimen" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://example.org/StructureDefinition/STI-USCoreSpecimen";
+         fhir:link <http://example.org/StructureDefinition/STI-USCoreSpecimen>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 6;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ], [
+         fhir:index 7;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 8;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "multiple" ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "literal";
+         fhir:index 0
+       ], [
+         fhir:value "logical";
+         fhir:index 1
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Specimen.subject";
+         fhir:index 0
+       ], [
+         fhir:value "Specimen.parent";
+         fhir:index 1
+       ], [
+         fhir:value "Specimen.request";
+         fhir:index 2
+       ]
+     ];
+     fhir:CapabilityStatement.rest.interaction [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "batch" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "search-system" ]
+     ];
+     fhir:CapabilityStatement.rest.searchParam [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_content" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-content";
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-content>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated";
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_security" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-security";
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-security>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_text" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/DomainResource-text";
+         fhir:link <http://hl7.org/fhir/SearchParameter/DomainResource-text>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_query" ];
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-query";
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-query>
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://example.org/CapabilityStatement/fhir-sti-cap.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
